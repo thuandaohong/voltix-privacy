@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for the Pin · Battery Android app — on-device battery data and Google AdMob ads.">
+<title>Pin · Battery Privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ground: #f5f8f8;
+    --surface: #ffffff;
+    --surface-2: #eef3f3;
+    --ink: #10201f;
+    --ink-soft: #3c4b4a;
+    --muted: #677776;
+    --accent: #0c6d77;
+    --accent-soft: #0a5a63;
+    --rule: #dce5e5;
+    --rule-strong: #c4d1d1;
+    --good: #2f7d5b;
+    --warn: #9a6a12;
+    --shadow: 0 1px 2px rgba(16,32,31,.05), 0 8px 24px rgba(16,32,31,.05);
+    color-scheme: light;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --ground: #0c1211;
+      --surface: #121a19;
+      --surface-2: #172120;
+      --ink: #e8efee;
+      --ink-soft: #b8c6c4;
+      --muted: #7f908e;
+      --accent: #5cc6d1;
+      --accent-soft: #7fd4dd;
+      --rule: #223130;
+      --rule-strong: #2c3d3c;
+      --good: #6bc298;
+      --warn: #d6a24a;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0c1211;
+    --surface: #121a19;
+    --surface-2: #172120;
+    --ink: #e8efee;
+    --ink-soft: #b8c6c4;
+    --muted: #7f908e;
+    --accent: #5cc6d1;
+    --accent-soft: #7fd4dd;
+    --rule: #223130;
+    --rule-strong: #2c3d3c;
+    --good: #6bc298;
+    --warn: #d6a24a;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 4.5rem 1.5rem 6rem; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent-soft); margin: 0;
+  }
+
+  header.masthead { display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem; }
+  .mark {
+    width: 52px; height: 52px; border-radius: 14px; flex: none;
+    background: linear-gradient(160deg, var(--accent), var(--accent-soft));
+    display: grid; place-items: center; box-shadow: var(--shadow);
+  }
+  .mark svg { width: 28px; height: 28px; display: block; }
+  h1 { font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em; margin: .15rem 0 .2rem; text-wrap: balance; }
+  .masthead .sub { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  .meta {
+    display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin: 0 0 2.5rem;
+    padding: .85rem 1.1rem; background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 12px; font-family: "IBM Plex Mono", monospace; font-size: .8rem; color: var(--ink-soft);
+  }
+  .meta b { color: var(--muted); font-weight: 500; }
+
+  .tldr {
+    background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 12px; padding: 1.4rem 1.5rem; margin: 0 0 3rem; box-shadow: var(--shadow);
+  }
+  .tldr h2 { margin: 0 0 .8rem; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-soft); font-family: "IBM Plex Mono", monospace; }
+  .tldr ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+  .tldr li { position: relative; padding-left: 1.6rem; color: var(--ink-soft); }
+  .tldr li::before {
+    content: ""; position: absolute; left: 0; top: .5em; width: .5rem; height: .5rem;
+    border-radius: 2px; background: var(--accent);
+  }
+  .tldr li b { color: var(--ink); font-weight: 600; }
+
+  section { margin: 0 0 2.4rem; }
+  h2.sec { font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em; margin: 0 0 .6rem;
+    padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+  section:first-of-type h2.sec { border-top: none; padding-top: 0; }
+  p { margin: 0 0 .9rem; color: var(--ink-soft); max-width: 62ch; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  .tbl-scroll { overflow-x: auto; margin: 1rem 0 .5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .9rem; }
+  th, td { text-align: left; padding: .7rem .9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  thead th {
+    font-family: "IBM Plex Mono", monospace; font-size: .72rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--rule-strong);
+  }
+  tbody td:first-child { color: var(--ink); font-weight: 500; white-space: nowrap; }
+  td .badge {
+    display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .68rem;
+    padding: .12rem .45rem; border-radius: 5px; letter-spacing: .03em;
+  }
+  .badge.dev { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--good); }
+  .badge.ext { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+
+  ul.plain { margin: 0 0 .9rem; padding-left: 1.2rem; color: var(--ink-soft); }
+  ul.plain li { margin-bottom: .35rem; }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .85rem;
+  }
+  footer a { color: var(--accent); }
+  .contact {
+    font-family: "IBM Plex Mono", monospace; font-size: .9rem; color: var(--ink);
+    background: var(--surface-2); padding: .3rem .55rem; border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7.5" y="3.5" width="9" height="17" rx="2.4" fill="#fff"/>
+        <rect x="9.5" y="1.6" width="5" height="2.4" rx="1" fill="#fff"/>
+        <path d="M12.6 7 L9.4 13 H11.6 L11 17.5 L14.6 11 H12.4 Z" fill="#0c6d77"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Pin · Battery</h1>
+      <p class="sub">An offline battery monitor for Android.</p>
+    </div>
+  </header>
+
+  <div class="meta">
+    <span><b>Effective</b> 13 September 2026</span>
+    <span><b>App</b> app.pin.battery</span>
+    <span><b>Developer</b> Dao Hong Thuan</span>
+  </div>
+
+  <div class="tldr">
+    <h2>The short version</h2>
+    <ul>
+      <li><b>Your battery data never leaves your phone.</b> Readings, charge sessions and health estimates are stored only in the app's local database — there is no account, no sign-in, and no server.</li>
+      <li><b>No analytics SDK.</b> The app does not track how you use it and sends no usage data off the device.</li>
+      <li><b>Ads are the one exception.</b> The app shows ads through <strong>Google AdMob</strong>, which uses your device's advertising identifier to serve and measure ads.</li>
+      <li><b>Nothing is ever sold.</b> Data is shared only with Google for the purpose of showing ads.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="sec">Who we are</h2>
+    <p>Pin · Battery (“the app”, “we”) is an on-device battery monitor. It reads the battery information your phone already exposes — level, voltage, current, temperature, charge counters — and turns it into charts, health estimates and charging insights. This policy explains exactly what data the app touches, where it stays, and the single case in which data leaves your device.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">What the app stores on your device</h2>
+    <p>To draw its history graphs and estimate battery health, the app records battery telemetry into a private database on your phone. This information is <strong>kept on the device only</strong>; it is not uploaded, backed up to us, or accessible to anyone but you.</p>
+    <ul class="plain">
+      <li><strong>Battery samples</strong> — timestamped level, voltage, current, temperature, charge-counter and screen-on/off state.</li>
+      <li><strong>Charge &amp; discharge sessions</strong> — when charging started and stopped, how much was added, and the derived wear and health figures.</li>
+      <li><strong>Your settings</strong> — thresholds, units, language, and the design capacity you enter.</li>
+    </ul>
+    <p>You can erase all of it at any time from <strong>Settings → Clear Charge History</strong>, or by uninstalling the app.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Advertising (Google AdMob)</h2>
+    <p>The app is free and supported by ads served through <strong>Google AdMob</strong>. To show and measure ads, Google's advertising SDK collects a limited set of information from your device, including your <strong>advertising identifier (Advertising ID)</strong>, coarse device and network attributes, and ad-interaction events. Depending on your settings and region, ads may be personalized.</p>
+    <p>This data is collected and processed by Google, not by us — we never receive it. Google's use of it is governed by the <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google Privacy &amp; Terms</a> and the <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data-disclosure guidance</a>.</p>
+    <p>You stay in control of the advertising identifier: on Android, open <strong>Settings → Privacy → Ads</strong> to reset it or to opt out of personalized ads. Resetting it does not remove ads, but limits how they are tailored to you.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Data summary</h2>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Where it goes</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Battery telemetry</td><td><span class="badge dev">On device</span></td><td>History graphs, health &amp; charging estimates</td></tr>
+          <tr><td>App settings</td><td><span class="badge dev">On device</span></td><td>Remember your preferences</td></tr>
+          <tr><td>Advertising ID</td><td><span class="badge ext">Google AdMob</span></td><td>Serve and measure ads</td></tr>
+          <tr><td>Ad interactions</td><td><span class="badge ext">Google AdMob</span></td><td>Ad delivery &amp; fraud prevention</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Permissions we ask for</h2>
+    <p>Each permission maps to a specific feature, and the app degrades gracefully without it:</p>
+    <ul class="plain">
+      <li><strong>Notifications</strong> — the live status notification and battery alerts (full-charge, stop-charge, low-battery, overheat).</li>
+      <li><strong>Usage access</strong> — to show which apps used the battery on the Usage screen. This is read on-device and never leaves it.</li>
+      <li><strong>Display over other apps</strong> — the optional full-screen charging view when you plug in.</li>
+      <li><strong>Full-screen alarms &amp; run at startup</strong> — so a battery alarm can wake the screen and monitoring resumes after a reboot.</li>
+      <li><strong>Internet &amp; advertising ID</strong> — used only by the ad SDK to load ads.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">Children</h2>
+    <p>The app is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children. Because ads are served by Google, ad content is subject to Google's own family and content policies.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Changes to this policy</h2>
+    <p>If this policy changes — for example, if we adjust how ads work — we will update this page and revise the effective date above. Material changes will be reflected in a future app update.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Contact</h2>
+    <p>Questions about privacy or this policy? Reach the developer at <span class="contact">thuandao93haiduong@gmail.com</span>. You can also send feedback directly from <strong>Settings → Send feedback</strong> in the app.</p>
+  </section>
+
+  <footer>
+    Pin · Battery — offline battery monitor. This page is the app's official privacy policy; the current version is linked from the app's Play Store listing and from Settings → Privacy &amp; data.
+  </footer>
+</div>
+
+</body>
+</html>
